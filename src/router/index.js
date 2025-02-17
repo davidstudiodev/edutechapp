@@ -6,6 +6,7 @@ import AdminView from '@/views/AdminView.vue'
 import RegisterView from '@/views/RegisterView.vue'
 import CoursesView from '@/views/CoursesView.vue'
 
+
 const routes = [
   {
     path: '/',

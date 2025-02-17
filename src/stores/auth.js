@@ -22,7 +22,7 @@ export const useAuthStore = defineStore('auth', {
             try {
                 const userCredential = await createUserWithEmailAndPassword(auth, email, password)
                 this.user = userCredential.user
-                this.isAuthenticated
+                this.isAuthenticated = true
                 
             } catch (error) {
                 console.error('Error to sigin:', error.message);
@@ -39,6 +39,8 @@ export const useAuthStore = defineStore('auth', {
                 console.error('Error to logout', error.message);
                 
             })
-        }
+        },
+        
     }
 })
+
