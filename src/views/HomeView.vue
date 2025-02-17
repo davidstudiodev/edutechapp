@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>Bienvenido a la plataforma</h1>
+    <p>Explora los cursos disponibles</p>
+    <button @click="goToCourses">Ver Cursos</button>
+    <p>¿Eres admin? <button @click="loginRoute">Entrar</button></p>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+<script setup>
 
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
+const goToCourses = () => {
+  router.push('/courses')
 }
+
+const loginRoute = () => {
+  router.push('/login')
+}
+
 </script>
+
+<style scoped>
+
+</style>
